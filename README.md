@@ -1,0 +1,2 @@
+# PAMO
+Programowanie aplikacji mobilnych 
