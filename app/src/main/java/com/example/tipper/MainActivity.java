@@ -1,3 +1,4 @@
+//Damian Eggert s19766
 package com.example.tipper;
 
 import java.text.DecimalFormat;
