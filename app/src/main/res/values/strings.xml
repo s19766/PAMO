@@ -1,8 +1,8 @@
 <resources>
-   <string name="app_name">BMI Calculator</string>
-   <string name="bmi_result">BMI result</string>
-   <string name="enter_height">Enter Height</string>
-   <string name="enter_weight">Enter Weight</string>
-   <string name="height">Height (cm)</string>
-   <string name="weight">Weight (kg)</string>
+    <string name="app_name">BMI Calculator</string>
+    <string name="bmi_result">BMI result</string>
+    <string name="enter_height">Enter Height</string>
+    <string name="enter_weight">Enter Weight</string>
+    <string name="height">Height (cm)</string>
+    <string name="weight">Weight (kg)</string>
 </resources>
