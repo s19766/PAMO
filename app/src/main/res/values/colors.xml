@@ -5,4 +5,8 @@
     <color name="colorAccent">#ff9100</color>
     <color name="amount_background">#BBDEFB</color>
     <color name="result_background">#FFE0B2</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="black">#000000</color>
+    <color name="light_green">#90EE90</color>
 </resources>

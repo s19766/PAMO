@@ -1,112 +1,63 @@
 //Damian Eggert s19766
 package com.example.tipper;
 
-import java.text.DecimalFormat;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable; // for EditText event handling
-import android.text.TextWatcher; // EditText listener
-import android.widget.EditText; // for bill amount input
-import android.widget.TextView; // for displaying text
+import android.view.View;
+import android.widget.Button;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    private double heightAmount = 0; // height amount entered by the user
-    private double weightAmount = 0; // weight amount entered by the user
-    private TextView bmiTextView; // shows BMI result
-    private TextView heightTextView; // shows height
-    private TextView weightTextView; // shows weight
-
-    // called when the activity is first created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState); // call superclass onCreate
-        setContentView(R.layout.activity_main); // inflate the GUI
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        // get references to programmatically manipulated TextViews
-        bmiTextView = (TextView) findViewById(R.id.bmiTextView);
-        heightTextView = (TextView) findViewById(R.id.heightTextView);
-        weightTextView = (TextView) findViewById(R.id.weightTextView);
+        Button goBmi, goCalories, goRecipes;
 
-        // set heightEditText's TextWatcher
-        EditText heightEditView =
-                (EditText) findViewById(R.id.heightEditText);
-        heightEditView.addTextChangedListener(heightEditTextWatcher);
+        goBmi = findViewById(R.id.bmiButton);
+        goCalories = findViewById(R.id.caloriesButton);
+        goRecipes = findViewById(R.id.recipesButton);
 
-        // set weightEditText's TextWatcher
-        EditText weightEditText =
-                (EditText) findViewById(R.id.weightEditText);
-        weightEditText.addTextChangedListener(weightEditTextWatcher);
+        goBmi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchBmiCalculator();
+            }
+        });
 
+        goCalories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchCaloriesCalculator();
+            }
+        });
+
+        goRecipes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchGetReceip();
+            }
+        });
     }
 
-    // calculate and display BMI
-    private void calculate() {
-        // calculate the BMI
-        double BMI_result = (weightAmount / ((heightAmount / 100) * (heightAmount / 100)));
-
-        // display BMI
-        DecimalFormat dfZero = new DecimalFormat("0.00");
-        String result = dfZero.format(BMI_result) + " " + "BMI";
-        bmiTextView.setText(result);
+    private void launchBmiCalculator() {
+        Intent intent = new Intent(this, BmiActivity.class);
+        startActivity(intent);
     }
 
+    private void launchCaloriesCalculator() {
+        Intent intent = new Intent(this, CaloriesCalcActivity.class);
+        startActivity(intent);
+    }
 
-    // listener object for the EditText's text-changed events
-    private final TextWatcher heightEditTextWatcher = new TextWatcher() {
-        // called when the user modifies the height
-        @Override
-        public void onTextChanged(CharSequence s, int start,
-                                  int before, int count) {
-
-            try {
-                heightAmount = Integer.parseInt(s.toString());
-                String result = heightAmount + " " + "cm";
-                heightTextView.setText(result);
-            }
-            catch (NumberFormatException e) {
-                heightTextView.setText("");
-                heightAmount = 0;
-            }
-
-            calculate();
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) { }
-
-        @Override
-        public void beforeTextChanged(
-                CharSequence s, int start, int count, int after) { }
-    };
-
-    private final TextWatcher weightEditTextWatcher = new TextWatcher() {
-        // called when the user modifies the weight
-        @Override
-        public void onTextChanged(CharSequence s, int start,
-                                  int before, int count) {
-
-            try {
-                weightAmount = Integer.parseInt(s.toString());
-                String result = weightAmount + " " + "kg";
-                weightTextView.setText(result);
-            }
-            catch (NumberFormatException e) {
-                weightTextView.setText("");
-                weightAmount = 0;
-            }
-
-            calculate();
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) { }
-
-        @Override
-        public void beforeTextChanged(
-                CharSequence s, int start, int count, int after) { }
-    };
+    private void launchGetReceip() {
+        Intent intent = new Intent(this, RecipesActivity.class);
+        startActivity(intent);
+    }
 }
 
 
