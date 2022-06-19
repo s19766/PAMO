@@ -1,15 +1,84 @@
 <resources>
     <string name="app_name">BMI Calculator</string>
+
+    <!--Bmi cal-->
     <string name="bmi_result">BMI result</string>
     <string name="enter_height">Enter Height</string>
     <string name="enter_weight">Enter Weight</string>
     <string name="height">Height (cm)</string>
     <string name="weight">Weight (kg)</string>
     <string name="age">Age</string>
+
+    <!--Main page-->
     <string name="button_main">Main Page</string>
     <string name="button_bmi">BMI</string>
     <string name="button_calories">Calories</string>
     <string name="button_recipes">Recipes</string>
+    <string name="quiz">Quiz</string>
+
+    <!--Calories-->
     <string name="button_female">Female</string>
     <string name="button_male">Male</string>
+
+    <!--QUIZ-->
+    <string name="title_quiz">Healthy Food Quiz</string>
+    <string name="quiz_question_label">Question:</string>
+    <string name="score_label">Score:</string>
+    <string name="correct_answer">Correct answer:</string>
+    <string name="good_answer">Good answer</string>
+    <string name="restart">Restart</string>
+    <string name="end">End of quiz</string>
+
+    <string name="question_1">Which of the following foods is NOT a good source of protein?</string>
+    <string name="question_1_ans1">Vegetables</string>
+    <string name="question_1_ans2">Eggs</string>
+    <string name="question_1_ans3">Dairy products</string>
+    <string name="question_1_ans4">Bananas</string>
+
+    <string name="question_2">Why should you eat a diversity of colourful foods in the diet?</string>
+    <string name="question_2_ans1">Colourful foods taste better</string>
+    <string name="question_2_ans2">Each colour provides different health benefits</string>
+    <string name="question_2_ans3">Colourful foods can last longer</string>
+    <string name="question_2_ans4">Neither answer is correct</string>
+
+    <string name="question_3">Oranges are a good source of which vitamin?</string>
+    <string name="question_3_ans1">Vitamin A</string>
+    <string name="question_3_ans2">Vitamin C</string>
+    <string name="question_3_ans3">Vitamin E</string>
+    <string name="question_3_ans4">Vitamin B</string>
+
+    <string name="question_4">Which of the following foods is good for vision and eye health?</string>
+    <string name="question_4_ans1">Chicken</string>
+    <string name="question_4_ans2">Salmon</string>
+    <string name="question_4_ans3">Tomatoes</string>
+    <string name="question_4_ans4">Beef</string>
+
+    <string name="question_5">Consuming too much meat may increase the risk of which diseases?</string>
+    <string name="question_5_ans1">Osteoarthritis</string>
+    <string name="question_5_ans2">Alzheimer’s disease</string>
+    <string name="question_5_ans3">Gout</string>
+    <string name="question_5_ans4">Neither answer is correct</string>
+
+    <string name="question_6">Vegetables are great sources of which types of carbohydrates?</string>
+    <string name="question_6_ans1">Starches</string>
+    <string name="question_6_ans2">Sugars</string>
+    <string name="question_6_ans3">Fat</string>
+    <string name="question_6_ans4">Fiber</string>
+
+    <string name="question_7">Which part of an egg is richer in protein and contains very few calories?</string>
+    <string name="question_7_ans1">Egg white</string>
+    <string name="question_7_ans2">Egg yolk</string>
+    <string name="question_7_ans3">Egg shell</string>
+    <string name="question_7_ans4">All</string>
+
+    <!-- Default values Quiz-->
+    <string name="_00">00</string>
+    <string name="answer_1">Answer 1</string>
+    <string name="answer_2">Answer 2</string>
+    <string name="answer_3">Answer 3</string>
+    <string name="answer_4">Answer 4</string>
+    <string name="x_of_y">x/y</string>
+    <string name="test_question">Test question</string>
+    <string name="bmi_add_data_point">test</string>
+    <string name="add_to_chart">Add to chart</string>
 </resources>

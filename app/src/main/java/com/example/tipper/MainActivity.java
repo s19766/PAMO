@@ -16,11 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button goBmi, goCalories, goRecipes;
+        Button goBmi, goCalories, goRecipes, goQuiz;
 
         goBmi = findViewById(R.id.bmiButton);
         goCalories = findViewById(R.id.caloriesButton);
         goRecipes = findViewById(R.id.recipesButton);
+        goQuiz = findViewById(R.id.goQuiz);
 
         goBmi.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
                 launchGetReceip();
             }
         });
+
+        goQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchQuiz();
+            }
+        });
     }
 
     private void launchBmiCalculator() {
@@ -56,6 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void launchGetReceip() {
         Intent intent = new Intent(this, RecipesActivity.class);
+        startActivity(intent);
+    }
+
+    private void launchQuiz() {
+        Intent intent = new Intent(this, QuizActivity.class);
         startActivity(intent);
     }
 }
